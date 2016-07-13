@@ -1,0 +1,31 @@
+'.source.lua':
+  'require cjson':
+    'prefix': 'require cjson'
+    'body': 'local cjson = require "cjson"'
+  'cjson.new()':
+    'prefix': 'cjson.new()'
+    'body': 'cjson.new()'
+  'cjson.encode(value)':
+    'prefix': 'cjson.encode(value)'
+    'body': 'cjson.encode(${1:value})'
+  'cjson.decode(text)':
+    'prefix': 'cjson.decode(text)'
+    'body': 'cjson.decode(${1:text})'
+  'cjson.decode_invalid_numbers(setting)':
+    'prefix': 'cjson.decode_invalid_numbers(setting)'
+    'body': 'cjson.decode_invalid_numbers(${1:setting})'
+  'cjson.encode_invalid_numbers(setting)':
+    'prefix': 'cjson.encode_invalid_numbers(setting)'
+    'body': 'cjson.encode_invalid_numbers(${1:setting})'
+  'cjson.encode_keep_buffer(keep)':
+    'prefix': 'cjson.encode_keep_buffer(keep)'
+    'body': 'cjson.encode_keep_buffer(${1:keep})'
+  'cjson.encode_max_depth(depth)':
+    'prefix': 'cjson.encode_max_depth(depth)'
+    'body': 'cjson.encode_max_depth(${1:depth})'
+  'cjson.decode_max_depth(depth)':
+    'prefix': 'cjson.decode_max_depth(depth)'
+    'body': 'cjson.decode_max_depth(${1:depth})'
+  'cjson.encode_sparse_array(convernt, ratio, safe)':
+    'prefix': 'cjson.encode_sparse_array(convernt, ratio, safe)'
+    'body': 'cjson.encode_sparse_array(${1:convernt}, ${2:ratio}, ${3:safe})'

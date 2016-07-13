@@ -1,0 +1,37 @@
+'.source.lua':
+  'require mysql':
+    'prefix': 'require mysql'
+    'body': 'local mysql = require "resty.mysql"'
+  'mysql:new':
+    'prefix': 'mysql:new'
+    'body': 'mysql:new()'
+  'db:connect(opt)':
+    'prefix': 'db:connect(opt)'
+    'body': '${1:db}:connect(${2:opt})'
+  'db:set_timeout(time)':
+    'prefix': 'db:set_timeout(time)'
+    'body': '${1:db}:set_timeout(${2:time})'
+  'db:set_keepalive(max_idle_timeout, pool_size)':
+    'prefix': 'db:set_keepalive(max_idle_timeout, pool_size)'
+    'body': '${1:db}:set_keepalive(${1:max_idle_timeout}, {2:pool_size})'
+  'db:get_reused_times()':
+    'prefix': 'db:get_reused_times()'
+    'body': '${1:db}:get_reused_times()'
+  'db:close()':
+    'prefix': 'db:close()'
+    'body': '${1:db}:close()'
+  'db:send_query(query)':
+    'prefix': 'db:send_query(query)'
+    'body': '${1:db}:send_query(${2:query})'
+  'db:read_result()':
+    'prefix': 'db:read_result()'
+    'body': '${1:db}:read_result()'
+  'db:query(query, nrows)':
+    'prefix': 'db:query(query, nrows)'
+    'body': '${1:db}:query(${2:query}, {3:nrows})'
+  'db:server_ver()':
+    'prefix': 'db:server_ver()'
+    'body': '${1:db}:server_ver()'
+  'db:set_compact_arrays(boolean)':
+    'prefix': 'db:set_compact_arrays(boolean)'
+    'body': '${1:db}:set_compact_arrays(${2:boolean})'

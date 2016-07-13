@@ -1,0 +1,19 @@
+'.source.lua':
+  'require upstream':
+    'prefix': 'require upstream'
+    'body': 'local upstream = require "ngx.upstream"'
+  'upstream.get_upstreams()':
+    'prefix': 'upstream.get_upstreams()'
+    'body': '${1:upstream}.get_upstreams()'
+  'upstream.get_servers(upstream_name)':
+    'prefix': 'upstream.get_servers(upstream_name)'
+    'body': '${1:upstream}.get_servers(${2:upstream_name})'
+  'upstream.get_primary_peers(upstream_name)':
+    'prefix': 'upstream.get_primary_peers(upstream_name)'
+    'body': '${1:upstream}.get_primary_peers(${2:upstream_name})'
+  'upstream.get_backup_peers(upstream_name)':
+    'prefix': 'upstream.get_backup_peers(upstream_name)'
+    'body': '${1:upstream}.get_backup_peers(${2:upstream_name})'
+  'upstream.set_peer_down(upstream_name, is_backup, peer_id, down_value)':
+    'prefix': 'upstream.set_peer_down(upstream_name, is_backup, peer_id, down_value)'
+    'body': '${1:upstream}.set_peer_down(${2:upstream_name}, ${3:is_backup}, ${4:peer_id}, ${5:down_value})'

@@ -1,0 +1,301 @@
+'.source.lua':
+  'ngx.arg[index]':
+    'prefix': 'ngx.arg[index]'
+    'body': 'ngx.arg[${1:index}]'
+  'ngx.var.VAR_NAME':
+    'prefix': 'ngx.var.VAR_NAME'
+    'body': 'ngx.var.${1:VAR_NAME}'
+  'ngx.ctx.VAR_NAME':
+    'prefix': 'ngx.ctx.VAR_NAME'
+    'body': 'ngx.ctx.${1:VAR_NAME}'
+  'ngx.location.capture(url)':
+    'prefix': 'ngx.location.capture(url)'
+    'body': 'ngx.location.capture(${1:url})'
+  'ngx.location.capture_multi({url}{url})':
+    'prefix': 'ngx.location.capture_multi({url}{url})'
+    'body': 'ngx.location.capture_multi({${1:url}}{${2:url}})'
+  'ngx.status':
+    'prefix': 'ngx.status'
+    'body': 'ngx.status'
+  'ngx.header.HEADER':
+    'prefix': 'ngx.header.HEADER'
+    'body': 'ngx.header.${1:head}'
+  'ngx.resp.get_headers()':
+    'prefix': 'ngx.resp.get_headers()'
+    'body': 'ngx.resp.get_headers()'
+  'ngx.resp.is_internal()':
+    'prefix': 'ngx.resp.is_internal()'
+    'body': 'ngx.resp.is_internal()'
+  'ngx.req.start_time()':
+    'prefix': 'ngx.req.start_time()'
+    'body': 'ngx.req.start_time()'
+  'ngx.req.http_version()':
+    'prefix': 'ngx.req.http_version()'
+    'body': 'ngx.req.http_version()'
+  'ngx.req.raw_header()':
+    'prefix': 'ngx.req.raw_header()'
+    'body': 'ngx.req.raw_header()'
+  'ngx.req.get_method()':
+    'prefix': 'ngx.req.get_method()'
+    'body': 'ngx.req.get_method()'
+  'ngx.req.set_method(method_id)':
+    'prefix': 'ngx.req.set_method(method_id)'
+    'body': 'ngx.req.set_method(${1:method_id})'
+  'ngx.req.set_uri(uri)':
+    'prefix': 'ngx.req.set_uri(uri)'
+    'body': 'ngx.req.set_uri(${1:uri})'
+  'ngx.req.set_uri_args(args)':
+    'prefix': 'ngx.req.set_uri_args(args)'
+    'body': 'ngx.req.set_uri_args(${1:args})'
+  'ngx.req.get_uri_args()':
+    'prefix': 'ngx.req.get_uri_args()'
+    'body': 'ngx.req.get_uri_args()'
+  'ngx.req.get_post_args()':
+    'prefix': 'ngx.req.get_post_args()'
+    'body': 'ngx.req.get_post_args()'
+  'ngx.req.get_headers()':
+    'prefix': 'ngx.req.get_headers()'
+    'body': 'ngx.req.get_headers()'
+  'ngx.req.set_header(header_name, header_value)':
+    'prefix': 'ngx.req.set_header(header_name, header_value)'
+    'body': 'ngx.req.set_header(${1:header_name}, ${2:header_value})'
+  'ngx.req.clear_header(header_name)':
+    'prefix': 'ngx.req.clear_header(header_name)'
+    'body': 'ngx.req.clear_header(${1:header_name})'
+  'ngx.shared.DICT':
+    'prefix': 'ngx.shared.DICT'
+    'body': 'ngx.shared.${1:DICT}'
+  'ngx.socket.udp()':
+    'prefix': 'ngx.socket.udp()'
+    'body': 'ngx.socket.udp()'
+  'ngx.socket.tcp()':
+    'prefix': 'ngx.socket.tcp()'
+    'body': 'ngx.socket.tcp()'
+  'ngx.get_phase()':
+    'prefix': 'ngx.get_phase()'
+    'body': 'ngx.get_phase()'
+  'ngx.thread.spawn(fun, ...)':
+    'prefix': 'ngx.thread.spawn(fun, ...)'
+    'body': 'ngx.thread.spawn(${1:fun}, ${2:...})'
+  'ngx.thread.wait(thread1, ...)':
+     'prefix': 'ngx.thread.wait(thread1, ...)'
+     'body': 'ngx.thread.wait(${1:thread1}, ${2:...})'
+  'ngx.thread.kill(thread)':
+     'prefix': 'ngx.thread.kill(thread)'
+     'body': 'ngx.thread.kill(${1:thread})'
+  'ngx.on_abort(callback)':
+    'prefix': 'ngx.on_abort(callback)'
+    'body': 'ngx.on_abort(${1:callback})'
+  'ngx.timer.at(delay, callback, ....)':
+    'prefix': 'ngx.timer.at(delay, callback, ....)'
+    'body': 'ngx.timer.at(${1:delay}, ${2:callback}, ${3:...})'
+  'ngx.timer.running_count()':
+    'prefix': 'ngx.timer.running_count()'
+    'body': 'ngx.timer.running_count()'
+  'ngx.timer.pending_count()':
+    'prefix': 'ngx.timer.pending_count()'
+    'body': 'ngx.timer.pending_count()'
+  'ngx.config.subsystem()':
+    'prefix': 'ngx.config.subsystem()'
+    'body': 'ngx.config.subsystem()'
+  'ngx.config.debug()':
+    'prefix': 'ngx.config.debug()'
+    'body': 'ngx.config.debug()'
+  'ngx.config.prefix()':
+    'prefix': 'ngx.config.prefix()'
+    'body': 'ngx.config.prefix()'
+  'ngx.config.nginx_version':
+    'prefix': 'ngx.config.nginx_version'
+    'body': 'ngx.config.nginx_version'
+  'ngx.config.nginx_configure()':
+    'prefix': 'ngx.config.nginx_configure()'
+    'body': 'ngx.config.nginx_configure()'
+  'ngx.config.ngx_lua_version':
+    'prefix': 'ngx.config.ngx_lua_version'
+    'body': 'ngx.config.ngx_lua_version'
+  'ngx.worker.exiting()':
+    'prefix': 'ngx.worker.exiting()'
+    'body': 'ngx.worker.exiting()'
+  'ngx.worker.pid()':
+    'prefix': 'ngx.worker.pid()'
+    'body': 'ngx.worker.pid()'
+  'ngx.worker.count()':
+    'prefix': 'ngx.worker.count()'
+    'body': 'ngx.worker.count()'
+  'ngx.worker.id()':
+    'prefix': 'ngx.worker.id()'
+    'body': 'ngx.worker.id()'
+  'ngx.req.read_body()':
+    'prefix': 'ngx.req.read_body()'
+    'body': 'ngx.req.read_body()'
+  'ngx.req.discard_body()':
+    'prefix': 'ngx.req.discard_body()'
+    'body': 'ngx.req.discard_body()'
+  'ngx.req.get_body_data()':
+    'prefix': 'ngx.req.get_body_data()'
+    'body': 'ngx.req.get_body_data()'
+  'ngx.req.get_body_file()':
+    'prefix': 'ngx.req.get_body_file()'
+    'body': 'ngx.req.get_body_file()'
+  'ngx.req.set_body_data(data)':
+    'prefix': 'ngx.req.set_body_data(data)'
+    'body': 'ngx.req.set_body_data(${1:data})'
+  'ngx.req.set_body_file(file_name)':
+    'prefix': 'ngx.req.set_body_file(file_name)'
+    'body': 'ngx.req.set_body_file(${1:file_name})'
+  'ngx.req.init_body()':
+    'prefix': 'ngx.req.init_body()'
+    'body': 'ngx.req.init_body()'
+  'ngx.req.append_body(data_chunk)':
+    'prefix': 'ngx.req.append_body(data_chunk)'
+    'body': 'ngx.req.append_body(${1:data_chunk})'
+  'ngx.req.finish_body()':
+    'prefix': 'ngx.req.finish_body()'
+    'body': 'ngx.req.finish_body()'
+  'ngx.req.socket()':
+    'prefix': 'ngx.req.socket()'
+    'body': 'ngx.req.socket()'
+  'ngx.exec(uri)':
+    'prefix': 'ngx.exec(uri)'
+    'body': 'ngx.exec(${1:uri})'
+  'ngx.redirect(uri)':
+    'prefix': 'ngx.redirect(uri)'
+    'body': 'ngx.redirect(${1:uri})'
+  'ngx.send_headers()':
+    'prefix': 'ngx.send_headers()'
+    'body': 'ngx.send_headers()'
+  'ngx.headers_sent':
+    'prefix': 'ngx.headers_sent'
+    'body': 'ngx.headers_sent'
+  'ngx.print(...)':
+    'prefix': 'ngx.print(...)'
+    'body': 'ngx.print(${1:...})'
+  'ngx.say(...)':
+    'prefix': 'ngx.say(...)'
+    'body': 'ngx.say(${1:...})'
+  'ngx.log(log_level, ...)':
+    'prefix': 'ngx.log(log_level, ...)'
+    'body': 'ngx.log(${1:log_level}, ${2:...})'
+  'ngx.flush(wait?)':
+    'prefix': 'ngx.flush(wait?)'
+    'body': 'ngx.flush(${1:wait?})'
+  'ngx.exit(status)':
+    'prefix': 'ngx.exit(status)'
+    'body': 'ngx.exit(${1:status})'
+  'ngx.eof()':
+    'prefix': 'ngx.eof()'
+    'body': 'ngx.eof()'
+  'ngx.sleep(seconds)':
+    'prefix': 'ngx.sleep(seconds)'
+    'body': 'ngx.sleep(${1:seconds})'
+  'ngx.escape_uri(str)':
+    'prefix': 'ngx.escape_uri(str)'
+    'body': 'ngx.escape_uri(${1:str})'
+  'ngx.unescape_uri(str)':
+    'prefix': 'ngx.unescape_uri(str)'
+    'body': 'ngx.unescape_uri(${1:str})'
+  'ngx.encode_args(table)':
+    'prefix': 'ngx.encode_args(table)'
+    'body': 'ngx.encode_args(${1:table})'
+  'ngx.decode_args(str)':
+    'prefix': 'ngx.decode_args(str)'
+    'body': 'ngx.decode_args(${1:str})'
+  'ngx.encode_base64(str)':
+    'prefix': 'ngx.encode_base64(str)'
+    'body': 'ngx.encode_base64(${1:str})'
+  'ngx.decode_base64(str)':
+    'prefix': 'ngx.decode_base64(str)'
+    'body': 'ngx.decode_base64(${1:str})'
+  'ngx.crc32_short(str)':
+    'prefix': 'ngx.crc32_short(str)'
+    'body': 'ngx.crc32_short(${1:str})'
+  'ngx.crc32_long(str)':
+    'prefix': 'ngx.crc32_long(str)'
+    'body': 'ngx.crc32_long(${1:str})'
+  'ngx.hmac_sha1(secret_key, str)':
+    'prefix': 'ngx.hmac_sha1(secret_key, str)'
+    'body': 'ngx.hmac_sha1(${1:secret_key}, ${2:str})'
+  'ngx.md5(str)':
+    'prefix': 'ngx.md5(str)'
+    'body': 'ngx.md5(${1:str})'
+  'ngx.md5_bin(str)':
+    'prefix': 'ngx.md5_bin(str)'
+    'body': 'ngx.md5_bin(${1:str})'
+  'ngx.sha1_bin(str)':
+    'prefix': 'ngx.sha1_bin(str)'
+    'body': 'ngx.sha1_bin(${1:str})'
+  'ngx.quote_sql_str(raw_value)':
+    'prefix': 'ngx.quote_sql_str(raw_value)'
+    'body': 'ngx.quote_sql_str(${1:raw_value})'
+  'ngx.today()':
+    'prefix': 'ngx.today()'
+    'body': 'ngx.today()'
+  'ngx.time()':
+    'prefix': 'ngx.time()'
+    'body': 'ngx.time()'
+  'ngx.now()':
+    'prefix': 'ngx.now()'
+    'body': 'ngx.now()'
+  'ngx.update_time()':
+    'prefix': 'ngx.update_time()'
+    'body': 'ngx.update_time()'
+  'ngx.localtime()':
+    'prefix': 'ngx.localtime()'
+    'body': 'ngx.localtime()'
+  'ngx.utctime()':
+    'prefix': 'ngx.utctime()'
+    'body': 'ngx.utctime()'
+  'ngx.cookie_time(sec)':
+    'prefix': 'ngx.cookie_time(sec)'
+    'body': 'ngx.cookie_time(${1:sec})'
+  'ngx.http_time(sec)':
+    'prefix': 'ngx.http_time(sec)'
+    'body': 'ngx.http_time(${1:sec})'
+  'ngx.parse_http_time(sec)':
+    'prefix': 'ngx.parse_http_time(sec)'
+    'body': 'ngx.parse_http_time(${1:sec})'
+  'ngx.is_subrequest()':
+    'prefix': 'ngx.is_subrequest()'
+    'body': 'ngx.is_subrequest()'
+  'ngx.re.match(subject, regex)':
+    'prefix': 'ngx.re.match(subject, regex)'
+    'body': 'ngx.re.match(${1:subject}, ${2:regex})'
+  'ngx.re.find(subject, regex)':
+    'prefix': 'ngx.re.find(subject, regex)'
+    'body': 'ngx.re.find(${1:subject}, ${2:regex})'
+  'ngx.re.gmatch(subject, regex)':
+    'prefix': 'ngx.re.gmatch(subject, regex)'
+    'body': 'ngx.re.gmatch(${1:subject}, ${2:regex})'
+  'ngx.re.sub(subject, regex, replace)':
+    'prefix': 'ngx.re.sub(subject, regex, replace)'
+    'body': 'ngx.re.sub(${1:subject}, ${2:regex}, ${3:replace})'
+  'ngx.re.gsub(subject, regex, replace)':
+    'prefix': 'ngx.re.gsub(subject, regex, replace)'
+    'body': 'ngx.re.gsub(${1:subject}, ${2:regex}, ${3:replace})'
+  'ngx.socket.udp()':
+    'prefix': 'ngx.socket.udp()'
+    'body': 'ngx.socket.udp()'
+  'ngx.socket.tcp()':
+    'prefix': 'ngx.socket.tcp()'
+    'body': 'ngx.socket.tcp()'
+  'ngx.socket.connect(host, port)':
+    'prefix': 'ngx.socket.connect(host, port)'
+    'body': 'ngx.socket.connect(${1:host}, ${2:port})'
+  'coroutine.create(f)':
+    'prefix': 'coroutine.create(f)'
+    'body': 'coroutine.create(${1:func})'
+  'coroutine.resume(co, ...)':
+    'prefix': 'coroutine.resume(co, ...)'
+    'body': 'coroutine.resume(${1:co}, ${2:...})'
+  'coroutine.yield(...)':
+    'prefix': 'coroutine.yield(...)'
+    'body': 'coroutine.yield(${1:...})'
+  'coroutine.wrap(f)':
+    'prefix': 'coroutine.wrap(f)'
+    'body': 'coroutine.wrap(${1:func})'
+  'coroutine.running()':
+    'prefix': 'coroutine.running()'
+    'body': 'coroutine.running()'
+  'coroutine.status(co)':
+    'prefix': 'coroutine.status(co)'
+    'body': 'coroutine.status(${1:co})'
