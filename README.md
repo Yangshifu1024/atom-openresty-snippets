@@ -1,7 +1,7 @@
 # Atom Snippets for OpenResty
 
 I can't update or unpublish the origin repo [atom-autocomplete-openresty](https://atom.io/packages/atom-autocomplete-openresty),
-So I create a new one. So bad.
+so I create the new one here, so bad.
 
 Updated to OpenResty v1.9.15.1
 
