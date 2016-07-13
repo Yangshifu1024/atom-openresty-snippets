@@ -1,7 +1,7 @@
 {
   "name": "atom-openresty-snippets",
   "author": "Frank Yang <codebear4@gmail.com",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Atom Snippets for OpenResty",
   "keywords": [
     "snippets",
