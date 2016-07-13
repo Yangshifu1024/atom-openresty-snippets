@@ -1,7 +1,7 @@
 {
   "name": "openresty-snippets",
   "main": "./lib/atom-autocomplete-openresty",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Atom Snippets for OpenResty",
   "keywords": [
     "openresty"
