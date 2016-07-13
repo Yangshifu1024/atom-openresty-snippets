@@ -1,16 +1,15 @@
 {
   "name": "atom-autocomplete-openresty",
   "main": "./lib/atom-autocomplete-openresty",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Atom Snippets for OpenResty",
   "keywords": [
-      "openresty"
+    "openresty"
   ],
   "repository": "https://github.com/codebear4/atom-autocomplete-openresty",
   "license": "MIT",
   "engines": {
     "atom": ">=1.0.0 <2.0.0"
   },
-  "dependencies": {
-  }
+  "dependencies": {}
 }
