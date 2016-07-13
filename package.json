@@ -1,14 +1,16 @@
 {
-  "name": "openresty-snippets",
-  "main": "./lib/atom-autocomplete-openresty",
+  "name": "atom-openresty-snippets",
+  "author": "Frank Yang <codebear4@gmail.com",
   "version": "0.0.3",
   "description": "Atom Snippets for OpenResty",
   "keywords": [
+    "snippets",
     "openresty"
   ],
   "license": "MIT",
   "engines": {
     "atom": ">=1.0.0 <2.0.0"
   },
-  "dependencies": {}
+  "dependencies": {},
+  "repository": "https://github.com/codebear4/atom-openresty-snippets.git"
 }
